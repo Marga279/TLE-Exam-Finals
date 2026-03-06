@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h1_1 {
+    font-size: 50px;
+    -webkit-text-stroke: 2px green;
+    text-align: center;
+    margin-top: 50px;
+    color: yellow;
+}
+
+.slide{
+    margin-top: -9em;
+    margin-left: 68em;
+    position: fixed;
+    max-height: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 270px;
+    background-color: white;
+    border-radius: 20px;
+    transition: 
+      max-height 0.5s ease,
+      opacity 0.5s ease,
+      transform 0.5s ease;
+    transform: translateX(0);
+    cursor: pointer;
+    opacity: 0;
+}
+
+.check {
+    visibility: hidden;
+}
+
+
+h2{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 15px;
+    color: aliceblue;
+    text-align: center;
+    text-shadow:
+       -1px -1px 0 black,  
+        1px -1px 0 black,
+       -1px  1px 0 black,
+        1px  1px 0 black;
+    background-color: rgb(221, 221, 82);
+    border-radius: 40px;
+    font-weight: 800;
+    width: 25vh;
+    margin-left: 10px;
+    padding: 10px 0;
+    padding-right: 10px;
+    pointer-events: none;
+}
+
+.bidi {
+    list-style-type: none;
+}
+
+.bidi .li-0 .a-0{
+    margin-top: 15vh;
+    transform: translateX(20px);
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    padding: 5px;
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    width: 10vh;
+}
+
+.bidi .li-1 .a-1{
+    transform: translateX(20px);
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    padding: 5px;
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    width: 10vh;
+}
+
+.bidi .li-2 .a-2{
+    transform: translateX(20px);
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    padding: 5px;
+    font-size: 25px;
+    display:inline-block;
+    text-decoration:none;
+    transition: 0.2s ease-out;
+    width: 10vh;
+}
+
+.hr-0 {
+    border: none;
+    position: absolute;
+    top: 13vh;
+    right: 24px;
+    width: 35vh;
+    height: 3px;
+    background-color: black;
+}
+
+.hr-1 {
+    border: none;
+    position: absolute;
+    top: 37vh;
+    right: 24px;
+    width: 35vh;
+    height: 3px;
+    background-color: black;
+}
+
+.p-0{
+    font-size: 30px;
+    margin-top: 10vh;
+    margin-left: 10px;
+    justify-content: center;
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    display:flex;
+    transition: 0.2s ease-out;
+}
+
+.p-1{
+    margin-top: -38px;
+    margin-left: 14vh;
+    font-size: 30px;
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    display:flex;
+    transition: 0.2s ease-out;
+}
+
+.ap {
+    text-decoration: none;
+    color: white;
+}
+
+.Profile {
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.bidi .li-1:hover .a-1, .bidi .li-2:hover .a-2, .bidi .li-0:hover .a-0 {
+    width: 33vh;
+    color: white;
+    background-color: violet;
+}
+
+.iim {
+    position: inherit;
+    margin-top: 3px;
+    margin-left: 8vh;
+    width: 30px;
+    height: 30px;
+}
+
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    right: 10vh;
+    top: 35px;
+    z-index: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: rgb(221, 221, 87);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .slide{
+    margin-top: -8em;
+    margin-left: 68em;
+    transform: translateX(0);
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-out
+    max-height 0.5s ease,
+      opacity 0.5s ease,
+      transform 0.5s ease;;
+    opacity: 1;
+    z-index: 1;
+    overflow: visible;
+    max-height: 100%;
+}
+
+.container {
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flip-card {
+    justify-content: center;
+    perspective: -800px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.flip-card-inner {
+    width: 790px;
+    height: 500px;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.flip-card .flip-card-inner:hover{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px black;
+}
+
+.flip-card-inner .month {
+    background-image: url(Images/events/kare_kare_sila_food.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .august {
+    background-image: url(Images/events/buwan\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .teacher {
+    background-image: url(Images/events/img-27.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .trip {
+    background-image: url(Images/events/img-24.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .xmas {
+    background-image: url(Images/events/XMAS.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .pictorial {
+    background-image: url(Images/events/img-5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-back{
+    font-size: 30px;
+    background: white;
+    color: darkgreen;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 25px;
+}

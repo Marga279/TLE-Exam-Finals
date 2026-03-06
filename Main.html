@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Get Started</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Main.Css">
+</head>
+<body style="background-image: url(Images/Main-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;">
+    <header>
+        <nav>
+            <div class="ski">
+                <img src="Images/LOGO.png"
+                    class="img-left">
+                    <button class="btn_1 b1" id="btn1">ABOUT</button>
+                    <button class="btn_2 b2" id="btn2">EVENTS</button>
+                    <button class="btn_3 b3" id="btn3">ACHIEVEMENTS</button>
+
+                <!--3 LINES-->
+                <label>
+                    <input type="checkbox" class="check">
+                    <div class="toggle toggleBTN">
+                        <span class="top_line common"></span>
+                        <span class="middle_line common"></span>
+                        <span class="bottom_line common"></span>
+                    </div>
+                    <div class="slide">
+                        <div id="userPage" class="user-page">
+                            <span id="userDisplay" class="h2"></span>
+                            <button onclick="logout()" class="btnn">Logout</button>
+                        </div>
+                        <img src="Images/Profile-PNG-Photo.png" class="Profile">
+                        
+                        <hr class="hr-0">
+                        <ul class="bidi">
+                            <li class="li-1"><a class="a-1" href="#">Settings</a></li>
+                            <li class="li-2"><a class="a-2" href="#">Privacy</a></li>
+                        </ul>
+                        <hr class="hr-1">
+                        <p class="p-0">Follow us on:</p>
+                        <a href="https://www.instagram.com/x.beacon_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="Images/instagram-logo-png-transparent-background-hd-11641668401khay8adru4-removebg-preview.png" class="iim"></a>
+                        <p class="p-1"><a class="ap" href="https://www.instagram.com/x.beacon_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">: X.Beacon</a></p>
+
+                        <button class="login-btn" onclick="openModal()" id="btnnn">Login</button>
+                        <div id="modal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <h2>Welcome Back!</h2>
+                                <input type="text" id="username" placeholder="Username">
+                                <input type="password" id="password" placeholder="Password">
+                                <button onclick="login()">Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="EX">
+            <h1>WHERE MOMENTS TURN INTO</h1>
+            <h1>LIFETIME MEMORY</h1>
+            <button class="btn_0" id="btn0"><strong>EXPLORE</strong></button>
+    </div>
+
+    <!---EXPLORE--->
+    <div class="slide_0" id="slide0">
+        <h1 class="h1_1">EXPLORE</h1>
+        <a href="explore.html"><div class="ex">
+            <div class="image">
+                <img class="img" src="Images/Explore/img-3.jpeg">
+                <img class="img" src="Images/Explore/img-4.jpeg">
+                <img class="img" src="Images/Explore/img-5.jpeg">
+                <img class="img" src="Images/Explore/img-6.jpeg">
+            </div>
+        </div>
+        </a>
+        <a href="id.html"><div class="iimg">
+            <div class="imag">
+                <img class="im" src="Images/ID/Andi_ID.png">
+                <img class="im" src="Images/ID/Ferron_ID.png">
+                <img class="im" src="Images/ID/Jewelle_ID.png">
+                <img class="im" src="Images/ID/Lorenzo_ID.png">
+            </div>
+        </div>
+        </a>
+        <a href="id.html"><p class="prof"><strong>Profile</strong></p></a>
+        <a href="explore.html"><p class="pic"><strong>Pictures</strong></p></a>
+    </div>
+
+    <!---ABOUT--->
+    <div class="slide-1" id="slide1">
+        <h1 class="h1_1">ABOUT</h1>
+        <p class="ABOUT_info">Welcome to the official website of Grade 10 – Beacon from Buenasher Learning Academy!</p>
+        <p class="ABOUT_info">Our section represents students who strive to be a guiding light of excellence, leadership, and unity within our school community. Just like a beacon that shines brightly, we aim to inspire others through our dedication to academics, creativity, and meaningful participation in school activities.</p>
+        <P class="ABOUT_info">This website serves as a platform to showcase our section’s events, achievements, projects, and memorable moments throughout the school year. It reflects who we are as learners, collaborators, and future leaders. 
+            Together, we continue to grow, support one another, and shine as one. </P>
+    </div>
+
+    <!---EVENTS--->
+    <div class="slide-2" id="slide2">
+        <a href="EVENTS.html" class="aa"><h1 class="h1_1">EVENTS</h1></a>
+        <a href="EVENTS.html"><div class="carousel">
+            <div class="group">
+                <img src="Images/Achievements/Kare_kare_sila_lang.jpg" class="card">
+                <img src="Images/events/XMAS.jpg" class="card">
+                <img src="Images/events/img-27.jpeg" class="card">
+                <img src="Images/events/img-24.jpeg" class="card">
+                <img src="Images/events/img-5.jpeg" class="card">
+            </div>
+            <div aria-hidden class="group">
+                <img src="Images/Achievements/Kare_kare_sila_lang.jpg" class="card">
+                <img src="Images/events/XMAS.jpg" class="card">
+                <img src="Images/events/img-24.jpeg" class="card">
+                <img src="Images/events/img-27.jpeg" class="card">
+                <img src="Images/events/img-5.jpeg" class="card">
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <!---ACHIEVEMENTS--->
+    <div class="slide-3" id="slide3">
+        <a href="ACHIEVEMENTS.html" class="aa"><h1 class="h1_1">ACHIEVEMENTS</h1></a>
+        <a href="ACHIEVEMENTS.html"><div class="carousel">
+            <div class="group">
+                <img src="Images/Achievements/Lorenzo_DSPC.jpg" class="card">
+                <img src="Images/Achievements/Jham_DSPC.png" class="card">
+                <img src="Images/Achievements/Ma'am_LPT.png" class="card">
+                <img src="Images/Achievements/Renzo_BULPRISA.png" class="card">
+                <img src="Images/Achievements/Martin_BULPRISA_PROVINCIAL.png" class="card">
+                <img src="Images/Achievements/Ferron_CODM.jpg" class="card">
+
+            </div>
+            <div aria-hidden class="group">
+                <img src="Images/Achievements/Lorenzo_DSPC.jpg" class="card">
+                <img src="Images/Achievements/Jham_DSPC.png" class="card">
+                <img src="Images/Achievements/Ma'am_LPT.png" class="card">
+                <img src="Images/Achievements/Renzo_BULPRISA.png" class="card">
+                <img src="Images/Achievements/Martin_BULPRISA_PROVINCIAL.png" class="card">
+                <img src="Images/Achievements/Ferron_CODM.jpg" class="card">
+
+            </div>
+        </div>
+        </a>
+    </div>
+
+</div>
+    <script src="Main.js"></script>
+</body>
+</html>

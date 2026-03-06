@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100hv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide{
+    margin-top: -20px;
+    position: fixed;
+    max-height: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 270px;
+    background-color: white;
+    border-radius: 20px;
+    transition: 
+      max-height 2.5s ease,
+      opacity 2.5s ease,
+      transform 2.5s ease;
+    margin-left: -20px;
+    transform: translateX(10em);
+    cursor: pointer;
+    opacity: 0;
+}
+
+.check {
+    visibility: hidden;
+}
+
+
+h2{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 15px;
+    color: aliceblue;
+    text-align: center;
+    text-shadow:
+       -1px -1px 0 black,  
+        1px -1px 0 black,
+       -1px  1px 0 black,
+        1px  1px 0 black;
+    background-color: rgb(221, 221, 82);
+    border-radius: 40px;
+    font-weight: 800;
+    width: 25vh;
+    margin-left: 10px;
+    padding: 10px 0;
+    padding-right: 10px;
+    pointer-events: none;
+}
+
+.bidi {
+    list-style-type: none;
+}
+
+.bidi .li-0 .a-0{
+    margin-top: 15vh;
+    transform: translateX(20px);
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    padding: 5px;
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    width: 10vh;
+}
+
+.bidi .li-1 .a-1{
+    transform: translateX(20px);
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    padding: 5px;
+    font-size: 25px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    width: 10vh;
+}
+
+.bidi .li-2 .a-2{
+    transform: translateX(20px);
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    padding: 5px;
+    font-size: 25px;
+    display:inline-block;
+    text-decoration:none;
+    transition: 0.2s ease-out;
+    width: 10vh;
+}
+
+.hr-0 {
+    border: none;
+    position: absolute;
+    top: 13vh;
+    right: 24px;
+    width: 35vh;
+    height: 3px;
+    background-color: black;
+}
+
+.hr-1 {
+    border: none;
+    position: absolute;
+    top: 37vh;
+    right: 24px;
+    width: 35vh;
+    height: 3px;
+    background-color: black;
+}
+
+.p-0{
+    font-size: 30px;
+    margin-top: 10vh;
+    margin-left: 10px;
+    justify-content: center;
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    display:flex;
+    transition: 0.2s ease-out;
+}
+
+.p-1{
+    margin-top: -38px;
+    margin-left: 14vh;
+    font-size: 30px;
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+    display:flex;
+    transition: 0.2s ease-out;
+}
+
+.ap {
+    text-decoration: none;
+    color: white;
+}
+
+.Profile {
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.bidi .li-1:hover .a-1, .bidi .li-2:hover .a-2, .bidi .li-0:hover .a-0 {
+    width: 33vh;
+    color: white;
+    background-color: violet;
+}
+
+.iim {
+    position: inherit;
+    margin-top: 3px;
+    margin-left: 8vh;
+    width: 30px;
+    height: 30px;
+}
+
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    right: 10vh;
+    top: 35px;
+    z-index: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background-color: rgb(221, 221, 87);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .slide{
+    margin-top: -18.5em;
+    margin-left: -16em;
+    transform: translateX(0);
+    transform: translateY(-200.5em);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-out;
+    opacity: 1;
+    z-index: 1;
+    overflow: visible;
+    max-height: 100%;
+}
+
+.h1 {
+    position: absolute;
+    top: 5vh;
+    left: 16em;
+    font-size: 50px;
+    color: yellow;
+    -webkit-text-stroke: 2px rgb(37, 94, 20);
+}
+.container {
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flip-mam{
+    position: fixed;
+    margin-top: 9em;
+    margin-left: -8em;
+    margin-bottom: -20em;
+    perspective: 3500px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;   
+}
+
+.flip-levin{
+    margin-top: 9em;
+    margin-left: 35em;
+    perspective: 3500px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;   
+}
+
+.flip-card {
+    margin-right: -10em;
+    margin-left: 22em;
+    margin-top: 3em;
+    perspective: -800px;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.flip-card-inner {
+    width: 320px;
+    height: 400px;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.flip-card .flip-card-inner:hover{
+    transform: rotateY(180deg);
+}
+
+.flip-mam .flip-card-inner:hover{
+    transform: rotateY(180deg);
+}
+
+.flip-levin .flip-card-inner:hover{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px black;
+}
+
+.flip-card-inner .syrel {
+    background-image: url(Images/ID/Syrel_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .kirby {
+    background-image: url(Images/ID/Kirby_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .lorenzo {
+    background-image: url(Images/ID/Lorenzo_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .keanne {
+    background-image: url(Images/ID/Keanne_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .kalel {
+    background-image: url(Images/ID/Kalel_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .iniego {
+    background-image: url(Images/ID/Iniego_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .neil {
+    background-image: url(Images/ID/Neil_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .martin {
+    background-image: url(Images/ID/Martin_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .simonne {
+    background-image: url(Images/ID/Simonne_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .tristan {
+    background-image: url(Images/ID/Tristan_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .dwyane {
+    background-image: url(Images/ID/Simonne_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .renzo {
+    background-image: url(Images/ID/Renzo_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .arc {
+    background-image: url(Images/ID/Arc_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .ram {
+    background-image: url(Images/ID/Ram_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .kelly {
+    background-image: url(Images/ID/Kelly_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .ferron {
+    background-image: url(Images/ID/Ferron_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .jewelle {
+    background-image: url(Images/ID/Jewelle_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .andi {
+    background-image: url(Images/ID/Andi_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .jhamea {
+    background-image: url(Images/ID/Jhamea_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .marga {
+    background-image: url(Images/ID/Marga_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .shine {
+    background-image: url(Images/ID/Shine-la_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .sarah {
+    background-image: url(Images/ID/Sarah_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .jazz {
+    background-image: url(Images/ID/Jazz_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .angel {
+    background-image: url(Images/ID/Andi_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .rona {
+    background-image: url(Images/ID/Rona_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .shey {
+    background-image: url(Images/ID/Shey_ID.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-inner .maam {
+    background-image: url(Images/ID/Maam_Larisa_ID.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card-back{
+    background: white;
+    color: darkgreen;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 25px;
+}
+
+.container h3{
+    font-size: 3em;
+}
+
